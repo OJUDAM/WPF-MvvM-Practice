@@ -13,13 +13,23 @@ namespace WPFMvvMTest.ViewModel
             get { return iNum; }
             set
             {
+                int iOldNum = iNum;
+
                 iNum = value;
 
                 OnPropertyChanged("Number");
-                OnPropertyChanged("PlusEnable");
-                OnPropertyChanged("MinusEnable");
-
-                PageContents = string.Format("{0} 페이지를 보고 있어요.", iNum);
+                if (iNum > 0 && iNum < 11)
+                {
+                    OnPropertyChanged("PlusEnable");
+                    OnPropertyChanged("MinusEnable");
+                    PageContents = string.Format("{0} 페이지를 보고 있어요.", iNum);
+                }
+                else
+                {
+                    System.Windows.MessageBox.Show("1~10 페이지만 입력 가능합니다.");
+                    iNum = iOldNum;
+                    OnPropertyChanged("Number");
+                }
             }
         }
 

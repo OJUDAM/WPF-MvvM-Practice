@@ -11,8 +11,9 @@
             <Button Content="-" Width="50" 
                     Command="{Binding MinusCommand}"
                     IsEnabled="{Binding MinusEnable}"/>
-            <Label Width="50" Background="#FFC8B9B9"
-                   Content="{Binding Number}"></Label>
+            <TextBox Width="50" Background="#FFC8B9B9"
+                   Text="{Binding Number, Mode=TwoWay,
+                UpdateSourceTrigger=PropertyChanged}"></TextBox>
             <Button Content="+" Width="50"
                     Command="{Binding PlusCommand}"
                     IsEnabled="{Binding PlusEnable}"></Button>
