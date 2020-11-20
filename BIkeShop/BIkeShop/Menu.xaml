@@ -6,10 +6,11 @@
       xmlns:local="clr-namespace:BikeShop"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Menu">
+      Title="Menu"
+      Background="{StaticResource background}">
 
     <Grid>
-        <Button Content="Products" HorizontalAlignment="Left" Margin="125,119,0,0" VerticalAlignment="Top" Width="130" Height="70"/>
+        <Button Content="Products" HorizontalAlignment="Left" Margin="125,119,0,0" VerticalAlignment="Top" Width="130" Height="70" Click="Button_Click_3"/>
         <Button Content="Live support" HorizontalAlignment="Left" Margin="278,119,0,0" VerticalAlignment="Top" Width="130" Height="70" Click="Button_Click_2"></Button>
         <Button Content="Email support" HorizontalAlignment="Left" Margin="436,119,0,0" VerticalAlignment="Top" Width="130" Height="70" Click="Button_Click_1"/>
         <TextBlock HorizontalAlignment="Left" Margin="125,221,0,0" TextWrapping="Wrap" Text="Adventure Works" VerticalAlignment="Top" Height="34" Width="283" FontSize="24" FontStyle="Italic"/>
